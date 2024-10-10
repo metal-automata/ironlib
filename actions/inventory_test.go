@@ -7,10 +7,10 @@ import (
 	"testing"
 
 	"github.com/bmc-toolbox/common"
-	dellFixtures "github.com/metal-toolbox/ironlib/fixtures/dell"
-	smcFixtures "github.com/metal-toolbox/ironlib/fixtures/supermicro"
-	"github.com/metal-toolbox/ironlib/model"
-	"github.com/metal-toolbox/ironlib/utils"
+	dellFixtures "github.com/metal-automata/ironlib/fixtures/dell"
+	smcFixtures "github.com/metal-automata/ironlib/fixtures/supermicro"
+	"github.com/metal-automata/ironlib/model"
+	"github.com/metal-automata/ironlib/utils"
 	"github.com/sirupsen/logrus/hooks/test"
 	"github.com/stretchr/testify/assert"
 )

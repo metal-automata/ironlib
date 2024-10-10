@@ -5,7 +5,7 @@ import (
 	"os"
 	"text/template"
 
-	"github.com/metal-toolbox/ironlib/model"
+	"github.com/metal-automata/ironlib/model"
 )
 
 var DellRepoTemplate = `[{{ .Name }}-{{ .RepoVersion }}-system-update_independent]

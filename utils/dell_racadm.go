@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/beevik/etree"
-	"github.com/metal-toolbox/ironlib/model"
+	"github.com/metal-automata/ironlib/model"
 	"github.com/pkg/errors"
 	"github.com/tidwall/gjson"
 )

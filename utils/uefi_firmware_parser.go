@@ -5,7 +5,7 @@ import (
 	"io/fs"
 	"os"
 
-	"github.com/metal-toolbox/ironlib/model"
+	"github.com/metal-automata/ironlib/model"
 )
 
 // TODO: for a future point in time

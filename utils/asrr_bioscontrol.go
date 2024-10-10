@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/metal-toolbox/ironlib/model"
+	"github.com/metal-automata/ironlib/model"
 	"github.com/pkg/errors"
 )
 

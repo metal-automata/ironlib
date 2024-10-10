@@ -3,7 +3,7 @@ package actions
 import (
 	"testing"
 
-	"github.com/metal-toolbox/ironlib/utils"
+	"github.com/metal-automata/ironlib/utils"
 	"github.com/stretchr/testify/assert"
 )
 

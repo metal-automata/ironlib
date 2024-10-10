@@ -5,9 +5,9 @@ import (
 	"strings"
 
 	"github.com/bmc-toolbox/common"
-	"github.com/metal-toolbox/ironlib/errs"
-	"github.com/metal-toolbox/ironlib/model"
-	"github.com/metal-toolbox/ironlib/utils"
+	"github.com/metal-automata/ironlib/errs"
+	"github.com/metal-automata/ironlib/model"
+	"github.com/metal-automata/ironlib/utils"
 	"github.com/pkg/errors"
 )
 

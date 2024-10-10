@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/bmc-toolbox/common"
-	"github.com/metal-toolbox/ironlib/model"
+	"github.com/metal-automata/ironlib/model"
 	"golang.org/x/net/html/charset"
 )
 

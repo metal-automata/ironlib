@@ -9,9 +9,9 @@ import (
 	"strings"
 
 	"github.com/bmc-toolbox/common"
-	"github.com/metal-toolbox/ironlib/firmware"
-	"github.com/metal-toolbox/ironlib/model"
-	"github.com/metal-toolbox/ironlib/utils"
+	"github.com/metal-automata/ironlib/firmware"
+	"github.com/metal-automata/ironlib/model"
+	"github.com/metal-automata/ironlib/utils"
 	"github.com/pkg/errors"
 	"github.com/r3labs/diff/v3"
 	"github.com/sirupsen/logrus"

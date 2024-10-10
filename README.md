@@ -1,7 +1,7 @@
-[![Go Reference](https://pkg.go.dev/badge/github.com/metal-toolbox/ironlib.svg)](https://pkg.go.dev/github.com/metal-toolbox/ironlib)
+[![Go Reference](https://pkg.go.dev/badge/github.com/metal-automata/ironlib.svg)](https://pkg.go.dev/github.com/metal-automata/ironlib)
 ![](https://img.shields.io/badge/Stability-Maintained-green.svg)
 
-Ironlib wraps various opensource and various vendor utilities to expose a consistent set of [interface methods](https://github.com/metal-toolbox/ironlib/blob/main/actions/interface.go) to,
+Ironlib wraps various opensource and various vendor utilities to expose a consistent set of [interface methods](https://github.com/metal-automata/ironlib/blob/main/actions/interface.go) to,
 
  - Collect inventory
  - Update firmware
@@ -10,8 +10,8 @@ Ironlib wraps various opensource and various vendor utilities to expose a consis
 
 For the available methods,
 
-- The supported actions interface and method docs can be found [here](https://pkg.go.dev/github.com/metal-toolbox/ironlib/actions)
-- The supported utilities and its methods can be found [here](https://pkg.go.dev/github.com/metal-toolbox/ironlib/utils)
+- The supported actions interface and method docs can be found [here](https://pkg.go.dev/github.com/metal-automata/ironlib/actions)
+- The supported utilities and its methods can be found [here](https://pkg.go.dev/github.com/metal-automata/ironlib/utils)
 
 ## Currently supported hardware
 
@@ -43,7 +43,7 @@ The list of tools that ironlib wraps around, in no particular order,
 - supermicro SUM
 - storecli
 
- [For the full list see here](https://github.com/metal-toolbox/ironlib/tree/main/utils)
+ [For the full list see here](https://github.com/metal-automata/ironlib/tree/main/utils)
 
 
 #### Examples
@@ -57,7 +57,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/metal-toolbox/ironlib"
+	"github.com/metal-automata/ironlib"
 	"github.com/sirupsen/logrus"
 )
 

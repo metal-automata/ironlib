@@ -4,7 +4,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/metal-toolbox/ironlib/model"
+	"github.com/metal-automata/ironlib/model"
 )
 
 const (

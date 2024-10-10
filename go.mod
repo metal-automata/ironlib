@@ -1,4 +1,4 @@
-module github.com/metal-toolbox/ironlib
+module github.com/metal-automata/ironlib
 
 go 1.22
 

@@ -3,7 +3,7 @@ package supermicro
 import (
 	"context"
 
-	"github.com/metal-toolbox/ironlib/utils"
+	"github.com/metal-automata/ironlib/utils"
 )
 
 // SetBIOSConfiguration sets bios configuration settings

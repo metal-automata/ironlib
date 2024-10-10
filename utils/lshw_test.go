@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/bmc-toolbox/common"
-	asrrFixtures "github.com/metal-toolbox/ironlib/fixtures/asrr"
-	dellFixtures "github.com/metal-toolbox/ironlib/fixtures/dell"
+	asrrFixtures "github.com/metal-automata/ironlib/fixtures/asrr"
+	dellFixtures "github.com/metal-automata/ironlib/fixtures/dell"
 	"github.com/stretchr/testify/assert"
 )
 

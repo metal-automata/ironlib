@@ -9,8 +9,8 @@ import (
 
 	"github.com/bmc-toolbox/common"
 	"github.com/dselans/dmidecode"
-	"github.com/metal-toolbox/ironlib/errs"
-	"github.com/metal-toolbox/ironlib/model"
+	"github.com/metal-automata/ironlib/errs"
+	"github.com/metal-automata/ironlib/model"
 	"github.com/pkg/errors"
 )
 

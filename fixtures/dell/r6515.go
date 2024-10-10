@@ -2,7 +2,7 @@ package dell
 
 import (
 	"github.com/bmc-toolbox/common"
-	"github.com/metal-toolbox/ironlib/model"
+	"github.com/metal-automata/ironlib/model"
 )
 
 // nolint:dupl,misspell,revive,stylecheck

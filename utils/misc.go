@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/bmc-toolbox/common"
-	"github.com/metal-toolbox/ironlib/errs"
+	"github.com/metal-automata/ironlib/errs"
 	"github.com/pkg/errors"
 )
 

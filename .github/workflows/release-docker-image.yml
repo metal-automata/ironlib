@@ -26,7 +26,7 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            ghcr.io/metal-toolbox/ironlib
+            ghcr.io/metal-automata/ironlib
           # generate Docker tags based on the following events/attributes
           tags: |
             type=ref,event=branch
@@ -61,13 +61,13 @@ jobs:
         id: scan
         uses: anchore/scan-action@v4
         with:
-          image: ghcr.io/metal-toolbox/ironlib@${{ steps.dockerbuild.outputs.digest }}
+          image: ghcr.io/metal-automata/ironlib@${{ steps.dockerbuild.outputs.digest }}
           acs-report-enable: true
           # TODO(jaosorior): Fail build once we migrate off CentOS.
           fail-build: false
 
       - name: Sign the images with GitHub OIDC Token
-        run: cosign sign --recursive --yes ghcr.io/metal-toolbox/ironlib@${{ steps.dockerbuild.outputs.digest }}
+        run: cosign sign --recursive --yes ghcr.io/metal-automata/ironlib@${{ steps.dockerbuild.outputs.digest }}
         env:
           COSIGN_EXPERIMENTAL: true
 

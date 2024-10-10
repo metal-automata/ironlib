@@ -3,8 +3,8 @@ package asrockrack
 import (
 	"context"
 
-	"github.com/metal-toolbox/ironlib/model"
-	"github.com/metal-toolbox/ironlib/utils"
+	"github.com/metal-automata/ironlib/model"
+	"github.com/metal-automata/ironlib/utils"
 )
 
 func (a *asrockrack) SetBIOSConfiguration(context.Context, map[string]string) error {

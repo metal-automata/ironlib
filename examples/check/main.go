@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/metal-toolbox/ironlib"
+	"github.com/metal-automata/ironlib"
 )
 
 func main() {

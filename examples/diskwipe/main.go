@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/bmc-toolbox/common"
-	"github.com/metal-toolbox/ironlib"
-	"github.com/metal-toolbox/ironlib/actions"
-	"github.com/metal-toolbox/ironlib/utils"
+	"github.com/metal-automata/ironlib"
+	"github.com/metal-automata/ironlib/actions"
+	"github.com/metal-automata/ironlib/utils"
 	"github.com/sirupsen/logrus"
 )
 

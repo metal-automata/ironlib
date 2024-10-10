@@ -5,7 +5,7 @@ import (
 	"flag"
 	"time"
 
-	"github.com/metal-toolbox/ironlib/utils"
+	"github.com/metal-automata/ironlib/utils"
 	"github.com/sirupsen/logrus"
 )
 
