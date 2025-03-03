@@ -23,7 +23,17 @@ type ExecError struct {
 
 // Error implements the error interface
 func (u *ExecError) Error() string {
-	return fmt.Sprintf("cmd %s exited with error: %s\n\t exitCode: %d\n\t stdout: %s", u.Cmd, u.Stderr, u.ExitCode, u.Stdout)
+	errMsg := fmt.Sprintf("'%s' exited with exit code: %d", u.Cmd, u.ExitCode)
+
+	if u.Stderr != "" {
+		errMsg += fmt.Sprintf(", stderr: %s", u.Stderr)
+	}
+
+	if u.Stdout != "" {
+		errMsg += fmt.Sprintf(", stdout: %s", u.Stdout)
+	}
+
+	return errMsg
 }
 
 func newExecError(cmd string, r *Result) *ExecError {
