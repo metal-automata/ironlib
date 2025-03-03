@@ -15,6 +15,7 @@ import (
 // Executor interface lets us implement dummy executors for tests
 type Executor interface {
 	Exec(context.Context) (*Result, error)
+	ExecWithOutputWriter(ctx context.Context, w io.WriteCloser) (result *Result, err error)
 	SetArgs(...string)
 	SetEnv([]string)
 	SetQuiet()
@@ -166,4 +167,42 @@ func (e *Execute) CheckExecutable() error {
 	}
 
 	return nil
+}
+
+// ExecWithStoutPipe executes the command while writing the output - stdout and stderr to the given pipe
+//
+// Note: The returned result.Stdout, result.Stderr fields are not populated
+func (e *Execute) ExecWithOutputWriter(ctx context.Context, w io.WriteCloser) (result *Result, err error) {
+	defer w.Close()
+	if e.CheckBin {
+		err = e.CheckExecutable()
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	cmd := exec.CommandContext(ctx, e.Cmd, e.Args...) //nolint:gosec // yes, this is expected - G204: Subprocess launched with a potential tainted input or cmd arguments (gosec)
+	cmd.Env = append(cmd.Env, e.Env...)
+	cmd.Stdin = e.Stdin
+
+	destStdout := []io.Writer{w}
+	destStderr := []io.Writer{w}
+
+	// include stdout, stderr on verbose
+	if !e.Quiet {
+		destStdout = append(destStdout, os.Stdout)
+		destStderr = append(destStderr, os.Stderr)
+	}
+
+	cmd.Stdout = io.MultiWriter(destStdout...)
+	cmd.Stderr = io.MultiWriter(destStderr...)
+
+	if err := cmd.Run(); err != nil {
+		result = &Result{ExitCode: cmd.ProcessState.ExitCode()}
+		return result, newExecError(e.GetCmd(), result)
+	}
+
+	result = &Result{ExitCode: cmd.ProcessState.ExitCode()}
+
+	return result, nil
 }
