@@ -229,6 +229,11 @@ func (e *FakeExecute) GetCmd() string {
 	return strings.Join(cmd, " ")
 }
 
+func (e *FakeExecute) ExecWithOutputWriter(_ context.Context, w io.WriteCloser) (result *Result, err error) {
+	defer w.Close()
+	return &Result{ExitCode: 0}, nil
+}
+
 var nvmeListDummyJSON = []byte(`{
 		"Devices" : [
 		  {

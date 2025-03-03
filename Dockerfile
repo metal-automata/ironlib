@@ -1,4 +1,4 @@
-# build ironlib wrapper binaries
+#s build ironlib wrapper binaries
 FROM golang:1.22-alpine AS helper-binaries
 
 WORKDIR /workspace
@@ -79,12 +79,6 @@ RUN microdnf install -y \
     ln -s /usr/bin/microdnf /usr/bin/yum
 
 RUN pip install uefi_firmware==v1.11
-
-# Install our custom flashrom package
-ADD https://github.com/metal-automata/flashrom/releases/download/v1.3.99/flashrom-1.3.99-0.el9.x86_64.rpm /tmp
-RUN if [[ $TARGETARCH == "amd64" ]] ; then \
-      rpm -ivh /tmp/flashrom*.rpm; \
-    fi
 
 # Delete /tmp/* as we don't need those included in the image.
 RUN rm -rf /tmp/*
